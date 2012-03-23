@@ -1,11 +1,95 @@
-<!-- START you can remove this -->
-<div id="content">
-  <h1>brunch</h1>
-  <h2>Welcome!</h2>
-  <ul>
-    <li><a href="http://brunch.readthedocs.org/">Documentation</a></li>
-    <li><a href="https://github.com/brunch/brunch/issues">Github Issues</a></li>
-    <li><a href="https://github.com/brunch/todos">Todos Example App</a></li>
-  </ul>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=227268744011500";
+        fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<header>
+<div class="container">
+  <div class="row">
+    <div class="eightcol">
+      <h1>How 2 WWW</h1>
+    </div>
+    <div class="fourcol last">
+      <!--
+      <nav>
+      <ul>
+      <li>About</li>
+      <li>Contact</li>
+      </ul>
+      </nav>
+      -->
+    </div>
+  </div>
 </div>
-<!-- END you can remove this -->
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="threecol">
+      <h3>Pepto Bismol Feast for All</h3>
+      <a href="/images/feastforall.jpg" class="thumb" title="Facebook Thanksgiving charitable campaign for Proctor & Gamble's Pepto Bismol product.">
+        <img src="/images/feastforall.jpg">
+      </a>
+    </div>
+    <div class="threecol">
+      <h3>Magic Brownie Adventure</h3>
+      <a href="/images/magicbrownie.jpg" class="thumb" title="For the newest Cheech & Chong movie. Uses parallax scrolling effect and lots of video."><img src="/images/magicbrownie.jpg"></a>
+    </div>
+    <div class="threecol">
+      <h3>Yoplait Save Lids Save Lives</h3>
+      <a href="/images/slsl.jpg" class="thumb" title="Users can submit codes printed on Yoplait yogurt lids to donate money to the fight against breast cancer."><img src="/images/slsl.jpg"></a>
+    </div>
+    <div class="threecol last">
+      <h3>Fiber One</h3>
+      <a href="/images/fiberone.jpg" class="thumb" title="A fresh look for a site which sorely needed it. Ties into the General Mills recipe database."><img src="/images/fiberone.jpg"></a>
+    </div>
+  </div>
+  
+   <div class="row">
+     <div class="threecol">
+       <h3>Sanofi Faces of Influenza</h3>
+       <a href="/images/foi-es.jpg" class="thumb" title="Spanish Language site using a i10n backend written in PHP">
+         <img src="/images/foi-es.jpg">
+       </a>
+     </div>
+     <div class="threecol">
+       <h3>Sanofi Fluzone Interdermal</h3>
+       <a href="/images/fluzone.jpg" class="thumb" title="Used popcorn.js to build a custom video player for iPad. Shows clickable hotspots which open supplemental information."><img src="/images/fluzone.jpg"></a>
+     </div>
+     <div class="threecol">
+       <h3>Hubworld</h3>
+       <a href="/images/hubworld.jpg" class="thumb" title="Brings together a ton of content for a new kid's TV channel. Includes a meta-game where kids can earn points and trophies, utilized Bunchball gaming platform."><img src="/images/hubworld.jpg"></a>
+     </div>
+     <div class="threecol last">
+       <h3>SDC</h3>
+       <a href="/images/sdcdir.jpg" class="thumb" title="A directory of SDC members, with UI for members, subscribers, and admin. Built with CakePHP, payments handled through Paypal."><img src="/images/sdcdir.jpg"></a>
+     </div>
+         </div>
+ </div>
+ 
+ <div class="container">
+ 	<div class="row">
+     <div class="twelvecol last">
+       <footer>
+ 				<!--
+ 				NOT SURE WHY, BUT SUBSCRIBE BUTTON JUST SHOWS A BIG BLANK BOX
+ 				<div class="fb-subscribe" data-href="https://www.facebook.com/randy.loffelmacher" data-show-faces="true" data-width="450"></div>
+ 				-->
+ 				
+ 				<div class="fb-like" data-href="http://loffelmacher.com" data-send="true" data-width="450" data-show-faces="true" data-color-scheme="dark"></div>
+ 				
+ 				
+ 				<div>
+ 					<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a>
+ 					<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Loffelmacher.com</span> 
+ 					by <a xmlns:cc="http://creativecommons.org/ns#" href="http://loffelmacher.com" property="cc:attributionName" rel="cc:attributionURL">Randall Loffelmacher</a> 
+ 					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
+ 				</div>
+       </footer>
+     </div>
+   </div>
+ </div>
