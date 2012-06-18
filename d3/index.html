@@ -26,34 +26,36 @@
 	// now using the following example
 	// http://bl.ocks.org/2295263
 	var buildPieChart = function(data) {	
-  	var m = 76,
-  	    r = 400,
-  	    z = d3.scale.category20c(),
-  	    outerRadius = 50;
+		var canvasWidth = 600, //width
+		   canvasHeight = 600,   //height
+		   outerRadius = 200,   //radius
+		   color = d3.scale.category20(); //builtin range of colors
+
   	
-  	// the SVG    
-    var svg = d3.select("body")
-      .selectAll("svg")
-      .data(data)
-      .enter().append("svg:svg")
-      .attr("width", (r + m) * 2)
-      .attr("height", (r + m) * 2)
-      .append("svg:g")
-      .attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
+	var vis = d3.select("body")
+	  .append("svg:svg") //create the SVG element inside the <body>
+	    .data(data) //associate our data with the document
+	    .attr("width", canvasWidth) //set the width of the canvas
+	    .attr("height", canvasHeight) //set the height of the canvas
+	    .append("svg:g") //make a group to hold our pie chart
+	      .attr("transform", "translate(" + 1.5*outerRadius + "," + 1.5*outerRadius + ")") 
   
-  	// some supporting elements, pie & arc
-    var pie = d3.layout.pie()
-      .value(function(d) { return d.income; });
+    // This will create <path> elements for us using arc data...
+    var arc = d3.svg.arc()
+      .outerRadius(outerRadius);
 
-		var arc = d3.svg.arc()
-		      .outerRadius(outerRadius);
+    var pie = d3.layout.pie() //this will create arc data for us given a list of values
+      .value(function(d) { return d.income; }) // Binding each value to the pie
+      .sort( function(d) { return null; } );
 
-    var arcs = svg.selectAll("path")
+    var arcs = vis.selectAll("g.slice")
       .data(pie)
-      .enter().append("svg:path")
-      .attr("d", d3.svg.arc()
-      .outerRadius(r))
-      .style("fill", function(d, i) { return z(i); });
+      .enter().append("svg:g")
+      .attr("class", 'slice');
+      
+		arcs.append('svg:path')
+			.attr('fill', function(d, i) { return color(i); })
+			.attr('d', arc);
       
     // add label legend to each arc
 		arcs.append("svg:text")
