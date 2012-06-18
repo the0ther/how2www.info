@@ -1,0 +1,50 @@
+﻿iframe.pop, .popup iframe {
+	margin-top: 13px;
+}
+
+.popup {
+	display: none; border: 3px solid #ccc;
+	background-color: #F2F2F2; z-index: 10000;
+}
+
+.popup-content {
+	position: relative; margin: 10px;
+}
+
+.popup .close-popup {
+	width: 12px; height: 11px; position: absolute;
+	right: 0; top: 0; cursor: pointer;
+	float: right;
+}
+
+.popup2 {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+	border: 3px solid #ccc;
+	background-color: #F2F2F2;
+	z-index: 20000;
+	overflow: visible;
+}
+
+.popup2 iframe {
+    overflow: visible;
+    /*height: 125px;*/
+}
+
+.popup-content2 {
+	position: relative;
+	margin: 10px;
+	background-color: #F2F2F2;
+    overflow: visible;
+    height: 125px;
+}
+
+.popup2 .close-popup {
+	width: 12px; height: 11px; position: absolute;
+	right: 0; top: 0; cursor: pointer;
+}
+
+div#main {
+    overflow: visible;
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="RGA.Allocations.Data.User">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>User.cs</FileName>
+      <HashCode>ACAAAEAAAAEAAAAIAAEQAAwAAAAAAAAgAAAAAAACAAg=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="RGA.Allocations.Data.Job">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Job.cs</FileName>
+      <HashCode>ACAQAAAAQAAAAAAAgEAQIAQAAAAAAgBgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="RGA.Allocations.Data.Allocation">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Allocation.cs</FileName>
+      <HashCode>ACSQAABEQCAAAAQIAAAACAgAAgAAAAAAAAAAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="RGA.Allocations.Data.Client">
+    <Position X="8.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Client.cs</FileName>
+      <HashCode>ACAAAAAAAAAAAAAAgCAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RGA.Allocations.Data.Department">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Department.cs</FileName>
+      <HashCode>ACAAAAAAAAAAgAIABAAQIAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RGA.Allocations.Data.ClientGroup">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ClientGroup.cs</FileName>
+      <HashCode>ACAAAAAAAAAABAAAAAAUIAQEAAAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

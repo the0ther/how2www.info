@@ -1,0 +1,70 @@
+*, body, div, td, p, span { font-family: Verdana; }
+form { text-align: left; }
+#allocation-controls, #allocation-date-selection, #table-below, #table-guide, .controls-section { text-align: left; display: block; }
+#table-below { font-family: Verdana; font-size: 8pt; }
+.rowalt { background-color: #ffffff; }
+div.rowalt > div.span-3 { height: 23px; }
+div.rowmain > div, div.rowmain > strong { line-height: 26px; }
+div.rowalt, div.rowalt > div { line-height: 23px; }
+div.breadcrumb { text-align: left; }
+.menu { display: none; }
+.span-1.last { margin-right: -1px;}
+#allocation-controls, #controls { margin-top: 10px; display: block; }
+.controls-section { float: left; height: 115px; margin-right:25px; padding-right: 25px; }
+.controls-section.border2 { padding-left: 10px; border-left: 1px solid #cccccc; display: inline; }
+#allocation-date-selection { margin: 10px 0 0 0; height: 20px; line-height: 20px; font-size: 8pt; clear: both; font-family: Verdana; }
+#table-below { width: 727px; }
+/*#table-guide { float: left; }*/
+#table-guide img { margin-right: 5px; }
+#table-guide .icon-margin { margin-left: 20px; }
+#table-guide .divider { padding: 0 20px; }
+#dropClientTeam, #EmpsDrop, #JobsDrop { margin: 10px 0; }
+.tight label { font-size: 8pt; font-weight: normal; }
+table.tight { margin-bottom: 0px; width: 250px; }
+/* this style will control the overall width of 1st column in the header */
+table.tight.small { width: 150px; } 
+table.tight td { padding: 0px 0px 0px 0px; }
+div.container { margin-left: 0px; font: 8pt Verdana; }
+div#allocation-controls table td { font-size: 8pt; font-weight: normal; }
+span.msg { font-size: 8pt; font-style: italic; }
+.right { text-align: right; }
+div.head { background-color: #808080; color: #fff; font-weight: bold; }
+div.deptrow { background-color: #E5E5E5; }
+div.border.last { width: 115px; margin-right: 0px; }
+div.border {border-right: solid 1px #cbcbcb; border-bottom: solid 1px #cbcbcb; }
+div.border.first { border-left: solid 1px; border-right: solid 1px; margin-left: -1px; border-color: #cbcbcb; }
+div.rowmain div.border { border-color: #cbcbcb; }
+img.toggle-all { margin-left: 5px; }
+img.toggle-row { margin-left: 8px; }
+img.toggle-all + span, img.toggle-row + a { padding-left: 3px; }
+/*div.joblist div.first a { padding-left: 20px; }*/
+div.rowalt div.first a { padding-left: 20px; }
+/*common2.css (line 6)*/
+/*div.joblist div.rowalt div.right span { padding-right: 10px; }*/
+div.rowalt div.right span { padding-right: 10px; }
+input.txt { 
+    border:1px solid #666666; color:#666666;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:6.5pt; margin-top:3px; text-align:center; width:30px; 
+    margin-left: 1px;
+}
+a:link.name, a:hover.name, a:visited.name { font-weight: normal; }
+a:link, div.deptrow a:link, div.first a:link, a:link.name, a:visited.name { color: #333333; text-decoration: none; } 
+a, div.deptrow a, div.first a { color: #333333;  text-decoration: none;  } 
+a:hover, div.deptrow a:hover, div.first a:hover, a:hover.name, a:hover.red { color:#CC0000; text-decoration:underline; }
+/* depts page layout styles */
+#controls select { display:block; width:170px; }
+div.employee-icon a { background: transparent none repeat scroll 0 0; padding: 0; }
+div.employee-icon { border:medium none; float:right; padding:0 10px 0 0; position:relative;  }
+.popup { background-color: #f2f2f2;}
+#MainGrid td.cent, #MainGrid div.span-1, div.cent { text-align: center; text-indent: 0; }
+.over { color: #cc0000; }
+.under { color: #0033cc; }
+/* used on the notes page */
+#notesPanel {height: 310px; width: 245px; background-color: #f2f2f2; }
+#notesIFrame { height: 285px; width: 245px; }
+#notesPanel div { background-color: #f2f2f2; }
+#notesPanel span { float: right; }
+/* styles used in the manage popups */
+.teamgridstyle th { text-align: center; font-size: 10pt; }
+.tgClientNameCell, .tgClientTitleCell, .tgNameCell, .tgDeptCell, .tgClientAddCell { font-weight: bold; }

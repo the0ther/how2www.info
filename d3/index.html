@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+  <div id="pie"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.8.1/d3.v2.min.js"></script>
+	<script>
+	$(function(){
+    var cleanTaxData = [];
+		var stateTaxData = [];
+
+		$.get('/govdata/wvps-imhx/rows.json')
+		.then(function(data, status, xhr) {
+			//console.log(data);
+      cleanTaxData = shapeData(data);
+      stateTaxData = getSummaryData(cleanTaxData);
+      console.log(stateTaxData);
+      buildPieChart(stateTaxData);
+		});
+	});
+	
+	var buildPieChart = function(data) {	
+  	var m = 10,
+  	    r = 200,
+  	    z = d3.scale.category20c();
+  	    
+    var svg = d3.select("body").selectAll("svg").
+      data(data, function(d) { 
+//        console.log(d);
+//        return d.data.income; 
+        return d;
+      }).
+      enter().append("svg:svg").
+      attr("width", (r + m) * 2).
+      attr("height", (r + m) * 2).
+      append("svg:g").
+      attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
+        
+    svg.selectAll("path").
+      data(d3.layout.pie(), function(d) { 
+        console.log(d); 
+        return d.income;
+      }).
+      enter().append("svg:path").
+      attr("d", d3.svg.arc().
+      outerRadius(r)).
+      style("fill", function(d, i) { return z(i); });
+
+	};
+	
+	var getSummaryData = function(data) {
+    var retval = [];
+    $.each(data, function(ii, row) {
+      if (row.county_code === "0") {
+        retval.push( {
+          state: row.state_abbreviation,
+          income: row.wages_and_salaries_incomes_in_thousands
+        });
+//        retval.push(row.wages_and_salaries_incomes_in_thousands);
+      }
+    });
+    return [retval];
+	};
+	
+	var shapeData = function(data) {
+    var retval = [];
+    $.each(data.data, function(ii, item) {
+      retval.push({
+        "state_code": item[8],
+        "county_code": item[9],
+        "state_abbreviation": item[10],
+        "county_name": item[11],
+        "total_number_of_tax_returns": item[12],
+        "total_number_of_exemptions": item[13],
+        "adjusted_gross_income_in_thousands": item[14],
+        "wages_and_salaries_incomes_in_thousands": item[15],
+        "dividend_incomes_in_thousands": item[16],
+        "interest_income_in_thousands": item[17]
+      });
+    });
+    return retval;
+	};
+  
+  
+  /*
+  8 + position gives the array index of the field
+  8 + index of cols[] is the same
+  */
+  var cols = [
+    {
+      id: 2704296,
+      name: "State Code",
+      dataTypeName: "number",
+      fieldName: "state_code"
+    },
+    {
+      id: 2704297,
+      name: "County Code",
+      dataTypeName: "number",
+      description: "ID 0 represents the total for the whole state.",
+      fieldName: "county_code"
+    },
+    {
+      id: 2704298,
+      name: "State Abbreviation",
+      dataTypeName: "text",
+      fieldName: "state_abbreviation"
+    },
+    {
+      id: 2704299,
+      name: "County Name",
+      dataTypeName: "text",
+      fieldName: "county_name"
+    },
+    {
+      id: 2704300,
+      name: "Total Number of Tax Returns",
+      dataTypeName: "number",
+      fieldName: "total_number_of_tax_returns"
+    },
+    {
+      id: 2704301,
+      name: "Total Number of Exemptions",
+      dataTypeName: "number",
+      description: "Excluding the deceased.",
+      fieldName: "total_number_of_exemptions"
+    },
+    {
+      id: 2707313,
+      name: "Adjusted Gross Income (In Thousands)",
+      dataTypeName: "money",
+      fieldName: "adjusted_gross_income_in_thousands"
+    },
+    {
+      id: 2707314,
+      name: "Wages and Salaries Incomes (In Thousands)",
+      dataTypeName: "money",
+      fieldName: "wages_and_salaries_incomes_in_thousands"
+    },
+    {
+      id: 2707315,
+      name: "Dividend Incomes (In Thousands)",
+      dataTypeName: "money",
+      fieldName: "dividend_incomes_in_thousands"
+    },
+    {
+      id: 2707316,
+      name: "Interest Income (In Thousands)",
+      dataTypeName: "money",
+      fieldName: "interest_income_in_thousands"
+    }
+  ];
+	</script>
+</body>
+</html>

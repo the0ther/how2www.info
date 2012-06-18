@@ -1,0 +1,87 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40DF4E19-83ED-4F24-99FB-8DE4AC5FF138}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rga.Allocations.Data</RootNamespace>
+    <AssemblyName>Rga.Allocations.Data</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jayrock.Json, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Rga.Allocations.Web\Bin\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allocation.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientGroup.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DeptGrid.cs" />
+    <Compile Include="EmpGrid.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="ManageAssignments.cs" />
+    <Compile Include="ManageTeamDataSource.cs" />
+    <Compile Include="ManageTeamResourceRow.cs" />
+    <Compile Include="ProjectGrid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionGrid.cs" />
+    <Compile Include="TeamGrid.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_BLL.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="bin\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="bin\Microsoft.Practices.ObjectBuilder.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GetDepts.aspx.cs" Inherits="Services_GetDepts" ContentType="text/plain" %>

@@ -1,0 +1,11 @@
+bin\Debug\Rga.Allocations.Data.dll
+bin\Debug\Rga.Allocations.Data.pdb
+bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+bin\Debug\Microsoft.Practices.ObjectBuilder.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Rga.Allocations.Data.dll
+obj\Debug\Rga.Allocations.Data.pdb

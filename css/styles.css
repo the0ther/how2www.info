@@ -1,0 +1,271 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+label { cursor: pointer; }
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+html {
+  background-image: url(/img/nami.png);
+  /*
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  */
+}
+
+body {
+  color: #eee;
+	-webkit-text-fill-color: #eee;
+	-webkit-text-stroke-color: #red;
+	-webkit-text-stroke-width: 0.25px;
+}
+
+a:visited, a:link {
+  color: #eee;
+}
+
+header {
+  margin-top: 30px;
+}
+
+nav {
+  float: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+footer {
+  font-size: 85%;
+}
+
+h1, nav ul, nav li{
+  font-family: 'Sancreek', cursive;
+}
+
+h2, h3, h4, h5, h6, div, p, ul, li {
+  font-family: 'Gentium Basic', serif;
+	-webkit-text-fill-color: #eee;
+	-webkit-text-stroke-color: #red;
+	-webkit-text-stroke-width: 0.25px;
+}
+
+div.row {
+  margin-bottom: 6.5em;
+}
+
+.thumb {
+  display: block;
+  max-height: 170px;  
+  overflow: hidden;
+  border: 1px solid black;
+  /*
+  -webkit-box-shadow: 0 5px 2px 3px rgba(219,219,219,0.75);
+  -moz-box-shadow: 0 5px 2px 3px rgba(219,219,219,0.75);
+  box-shadow: 0 5px 2px 3px rgba(255,255,255,0.75);
+  */
+}
+
+div.about {
+  display: none;
+}
+
+div.contact {
+  display: none;
+}
+
+.container {
+/*  outline: solid 2px red; */
+}
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(images/overlay.png) repeat 0 0;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+  body {
+		
+  }
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
+
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+.hidden { display: none !important; visibility: hidden; }
+
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

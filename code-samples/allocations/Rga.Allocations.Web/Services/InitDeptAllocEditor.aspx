@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InitDeptAllocEditor.aspx.cs" Inherits="Allocations.Services_InitDeptAllocEditor" ContentType="text/plain" %>
