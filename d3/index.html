@@ -26,10 +26,12 @@
 	// now using the following example
 	// http://bl.ocks.org/2295263
 	var buildPieChart = function(data) {	
-  	var m = 10,
+  	var m = 76,
   	    r = 400,
-  	    z = d3.scale.category20c();
-  	    
+  	    z = d3.scale.category20c(),
+  	    outerRadius = 50;
+  	
+  	// the SVG    
     var svg = d3.select("body")
       .selectAll("svg")
       .data(data)
@@ -39,15 +41,54 @@
       .append("svg:g")
       .attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
   
+  	// some supporting elements, pie & arc
     var pie = d3.layout.pie()
       .value(function(d) { return d.income; });
-        
-    svg.selectAll("path")
+
+		var arc = d3.svg.arc()
+		      .outerRadius(outerRadius);
+
+    var arcs = svg.selectAll("path")
       .data(pie)
       .enter().append("svg:path")
       .attr("d", d3.svg.arc()
       .outerRadius(r))
       .style("fill", function(d, i) { return z(i); });
+      
+    // add label legend to each arc
+		arcs.append("svg:text")
+		  .attr("transform", function(d) { //set the label's origin to the center of the arc
+		    //we have to make sure to set these before calling arc.centroid
+		    d.outerRadius = outerRadius + 50; // Set Outer Coordinate
+		    d.innerRadius = outerRadius + 45; // Set Inner Coordinate
+		    return "translate(" + arc.centroid(d) + ")";
+		  })
+		  .attr("text-anchor", "middle") //center the text on it's origin
+		  .style("fill", "Purple")
+		  .style("font", "bold 12px Arial")
+		  .text(function(d, i) { return d.data.state; });
+     
+		// Add a magnitude value to the larger arcs, translated to the arc centroid and rotated.
+		arcs.filter(function(d) { return d.endAngle - d.startAngle > .2; }).append("svg:text")
+		  .attr("dy", ".35em")
+		  .attr("text-anchor", "middle")
+		  //.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")"; })
+		  .attr("transform", function(d) { //set the label's origin to the center of the arc
+		    //we have to make sure to set these before calling arc.centroid
+		    d.outerRadius = outerRadius; // Set Outer Coordinate
+		    d.innerRadius = outerRadius/2; // Set Inner Coordinate
+		    return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
+		  })
+		  .style("fill", "White")
+		  .style("font", "bold 12px Arial")
+		  .text(function(d) { return d.data.magnitude; });
+     
+     
+		// Computes the angle of an arc, converting from radians to degrees.
+		function angle(d) {
+		  var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
+		  return a > 90 ? a - 180 : a;
+		}
 	};
 	
 
