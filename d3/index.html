@@ -30,15 +30,14 @@
 		   canvasHeight = 600,   //height
 		   outerRadius = 200,   //radius
 		   color = d3.scale.category20(); //builtin range of colors
-
-  	
+ 
 	var vis = d3.select("body")
 	  .append("svg:svg") //create the SVG element inside the <body>
 	    .data(data) //associate our data with the document
 	    .attr("width", canvasWidth) //set the width of the canvas
 	    .attr("height", canvasHeight) //set the height of the canvas
 	    .append("svg:g") //make a group to hold our pie chart
-	      .attr("transform", "translate(" + 1.5*outerRadius + "," + 1.5*outerRadius + ")") 
+			.attr("transform", "translate(" + 1.5*outerRadius + "," + 1.5*outerRadius + ")") 
   
     // This will create <path> elements for us using arc data...
     var arc = d3.svg.arc()
