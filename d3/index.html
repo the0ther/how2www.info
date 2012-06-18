@@ -23,34 +23,35 @@
 		});
 	});
 	
+	// now using the following example
+	// http://bl.ocks.org/2295263
 	var buildPieChart = function(data) {	
   	var m = 10,
   	    r = 200,
   	    z = d3.scale.category20c();
   	    
-    var svg = d3.select("body").selectAll("svg").
-      data(data, function(d) { 
-//        console.log(d);
-//        return d.data.income; 
-        return d;
-      }).
+    var svg = d3.select("body").
+      selectAll("svg").
+      data(data).
       enter().append("svg:svg").
       attr("width", (r + m) * 2).
       attr("height", (r + m) * 2).
       append("svg:g").
       attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
+  
+    var pie = d3.layout.pie().
+      value(function(d) { return d.income; }).
+      sort(function(d) { return null });
         
     svg.selectAll("path").
-      data(d3.layout.pie(), function(d) { 
-        console.log(d); 
-        return d.income;
-      }).
+      data(pie).
       enter().append("svg:path").
       attr("d", d3.svg.arc().
       outerRadius(r)).
       style("fill", function(d, i) { return z(i); });
-
 	};
+	
+
 	
 	var getSummaryData = function(data) {
     var retval = [];
