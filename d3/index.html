@@ -105,6 +105,8 @@
         });
       }
     });
+    retval = _.sortBy(retval, function(item) { return -item.income; });
+    console.log(retval);
     return [retval];
 	};
 	
