@@ -1,6 +1,10 @@
 define 'Mergesort', [], () ->
   class Mergesort
     sort: (@list) ->
-      atoms = for atom in list
+      left = for atom in list[0..((list.length/2)-1)]
         [ atom ]
-      console.log atoms
+      right = for atom in list[((list.length/2))..]
+        [ atom ]
+      console.log 'left: ', left, 'right', right
+      # pivot 
+      # for atom in atoms
