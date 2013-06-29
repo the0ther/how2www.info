@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+  <head>	
+    <meta charset="utf-8" />
+	<title>how2www</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic|Sancreek' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	
+</head>
+
+
+<body> 
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=227268744011500";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+  <header>
+  <div class="container">
+    <div class="row">
+      <div class="eightcol">
+	<h1>how2www</h1>
+      </div>
+      <div class="fourcol last">
+        <!--
+        <nav>
+        <ul>
+        <li>About</li>
+        <li>Contact</li>
+        </ul>
+        </nav>
+        -->
+      </div>
+    </div>
+  </div>
+  </header>
+
+<div class="container">
+  <div class="row">
+    <div class="threecol">
+      <h3>Pepto Bismol Feast for All</h3>
+      <a href="/img/feastforall.jpg" class="thumb" title="Facebook Thanksgiving charitable campaign for Proctor & Gamble's Pepto Bismol product.">
+        <img src="/img/feastforall.jpg">
+      </a>
+    </div>
+    <div class="threecol">
+      <h3>Magic Brownie Adventure</h3>
+      <a href="/img/magicbrownie.jpg" class="thumb" title="For the newest Cheech & Chong movie. Uses parallax scrolling effect and lots of video."><img src="/img/magicbrownie.jpg"></a>
+    </div>
+    <div class="threecol">
+      <h3>Yoplait Save Lids Save Lives</h3>
+      <a href="/img/slsl.jpg" class="thumb" title="Users can submit codes printed on Yoplait yogurt lids to donate money to the fight against breast cancer."><img src="/img/slsl.jpg"></a>
+    </div>
+    <div class="threecol last">
+      <h3>Fiber One</h3>
+      <a href="/img/fiberone.jpg" class="thumb" title="A fresh look for a site which sorely needed it. Ties into the General Mills recipe database."><img src="/img/fiberone.jpg"></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="threecol">
+      <h3>Sanofi Faces of Influenza</h3>
+      <a href="/img/foi-es.jpg" class="thumb" title="Spanish Language site using a i10n backend written in PHP">
+        <img src="/img/foi-es.jpg">
+      </a>
+    </div>
+    <div class="threecol">
+      <h3>Sanofi Fluzone Interdermal</h3>
+      <a href="/img/fluzone.jpg" class="thumb" title="Used popcorn.js to build a custom video player for iPad. Shows clickable hotspots which open supplemental information."><img src="/img/fluzone.jpg"></a>
+    </div>
+    <div class="threecol">
+      <h3>Hubworld</h3>
+      <a href="/img/hubworld.jpg" class="thumb" title="Brings together a ton of content for a new kid's TV channel. Includes a meta-game where kids can earn points and trophies, utilized Bunchball gaming platform."><img src="/img/hubworld.jpg"></a>
+    </div>
+    <div class="threecol last">
+      <h3>SDC</h3>
+      <a href="/img/sdcdir.jpg" class="thumb" title="A directory of SDC members, with UI for members, subscribers, and admin. Built with CakePHP, payments handled through Paypal."><img src="/img/sdcdir.jpg"></a>
+    </div>
+	</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="twelvecol last">
+      <footer>
+				<!--
+				NOT SURE WHY, BUT SUBSCRIBE BUTTON JUST SHOWS A BIG BLANK BOX
+				<div class="fb-subscribe" data-href="https://www.facebook.com/randy.loffelmacher" data-show-faces="true" data-width="450"></div>
+				-->
+				
+				<div class="fb-like" data-href="http://how2www.info" data-send="true" data-width="450" data-show-faces="true" data-color-scheme="dark"></div>
+
+				
+				<div>
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a>
+				<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">how2www.info</span> 
+				by <a xmlns:cc="http://creativecommons.org/ns#" href="http://how2www.info" property="cc:attributionName" rel="cc:attributionURL">Randall Loffelmacher</a> 
+				is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
+				</div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <p></p>
+</div>
+
+<div class="contact">
+
+  </div>
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via build script -->
+  <script defer src="/js/plugins.js"></script>
+  <script defer src="/js/script.js"></script>
+  <!-- end scripts -->
+
+</body>
+
+</html>
