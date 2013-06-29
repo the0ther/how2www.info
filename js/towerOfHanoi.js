@@ -1,49 +1,41 @@
-var loops = 0;
-var numDisks = 4;
-//var p1 = [], p2 = [], p3 = [];
-var board = [[], [], []];
-
-function towerOfHanoi(size) {
-  for (var ii = size; ii > 0; ii--) {
-    board[0][ii % size] = { "originalIndex": ii % size, "value": size - (ii % size) };
-  }
-
-  move(size, board[0], board[2], board[1]);
-  console.log('finished');
-}
-
-function move(n, p1, p2, p3) {
-  console.log('n: ', n);
-  console.log('board@0: ', board[0], ' board@1: ', board[1], ' board@2: ', board[2]);
-  console.log('p1: ', p1, ' p2: ', p2, ' p3: ', p3);
-  printBoard(board);
-  console.log('');
-  if (n > 1) {
-    move(n-1, p1, p3, p2);
-  }
-  if (n === 1) {
-    p2.push(p1.pop());
-    //console.log("Move top disc from %d to %d.\n", p1, p2);
-  }
-  if (n > 1) {
-    move(n-1, p3, p2, p1);
-  }
-}
-
-function printBoard(board) {
-  console.log('[[' + board[0] + '],[' + board[1] + '],[' + board[2] + ']]');
-}
-
-function isSolved(board) {
-  if (board[0].length === 0 && board[2].length === n) {
-    for (var ii = 0; ii < board[2].length; ii++) {
-      if (board[2][ii] !== ii) {
-        return false;
+(function () {
+    var numDisks = 4;
+    var board = [ 
+      {"vals": [], "name": "peg1" }, 
+      {"vals": [], "name": "peg2" },
+      {"vals": [], "name": "peg3" }
+    ];
+    
+    function towerOfHanoi(size) {
+      for (var ii = size; ii > 0; ii--) {
+        board[0].vals[ii % size] = "disc: " + (size - (ii % size));
+      }
+    
+      printBoard(board);
+      move(size, board[0], board[2], board[1]);
+      console.log('finished');
+      printBoard(board);
+    }
+    
+    function move(n, source, dest, spare) {
+      if (n === 1) {
+        var disc = source.vals.pop();
+        dest.vals.push(disc);
+        //console.log('Move top disc ' + disc + ' from ' + source.name + ' to ' + dest.name);
+        printBoard(board);
+      } else {
+        move(n-1, source, spare, dest);
+        var disc = source.vals.pop();
+        dest.vals.push(disc);
+        //console.log('Move top disc ' + disc + ' from ' + source.name + ' to ' + dest.name);
+        printBoard(board);
+        move(n-1, spare, dest, source);
       }
     }
-    return true;
-  }
-  return false;
-}
-
-towerOfHanoi(numDisks);
+    
+    function printBoard(board) {
+      console.log('[[' + board[0].vals + '],[' + board[1].vals + '],[' + board[2].vals + ']]');
+    }
+    
+    towerOfHanoi(numDisks);
+})();
